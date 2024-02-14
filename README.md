@@ -1,58 +1,50 @@
-# Sport League Web UI
+🔗 **Como Rodar o Projeto:**
 
-Welcome to the Sport League Web UI project. The goal of the project is to build a browser based web frontend SPA that gets the data about match schedule/results from the backend and then computes leaderboard based on the rules explained in the challenge description.
+1. **Clone o Repositório:**
+   - Clone o repositório do projeto para sua máquina local usando o comando abaixo:
 
-## Install Dependencies
+     ```bash
+     git clone <URL_DO_REPOSITÓRIO>
+     ```
 
-This solution requires NodeJs v16 installed.
+2. **Configuração do Servidor Mock JSON:**
+   - Após clonar o repositório, navegue até o diretório raiz do projeto no terminal.
+   - Instale as dependências do servidor mock JSON executando o comando:
 
-In order to install project dependencies run:
+     ```bash
+     npm install
+     ```
+   - Inicie o servidor mock JSON usando o seguinte comando:
 
-> **npm** install
+     ```bash
+     npx json-fake-server -m dev-mock-server-config.json
+     ```
 
-## Running Backend Mock Server
+3. **Instalação do Projeto:**
+   - Navegue até o diretório raiz do projeto no terminal.
+   - Instale as dependências do projeto executando o comando:
 
-In order to work on the frontend application we have provided a simple mock database server.
+     ```bash
+     npm install
+     ```
 
-To run the mock server run the following command:
+4. **Execução do Projeto:**
+   - Após a instalação das dependências, inicie o servidor de desenvolvimento local com o seguinte comando:
 
-> **node** server.js dev-mock-server-config.json
+     ```bash
+     npm start
+     ```
 
-After this you would be able to access backend at http://localhost:3001. To verify if the server is running you can run:
+5. **Acesso à Aplicação:**
+   - Acesse a aplicação em seu navegador padrão através do seguinte endereço: [http://localhost:3000/](http://localhost:3000/).
 
-> **curl** http://localhost:3001/api/version
+ℹ️ **Libs Utilizadas:**
+- **React:** Biblioteca JavaScript para construção de interfaces de usuário.
+- **React Router Dom:** Roteamento para aplicações React, permitindo a navegação entre diferentes páginas.
+- **Date-fns:** Biblioteca JavaScript moderna e eficiente para manipulação de datas.
+- **Json-fake-server:** Servidor mock JSON para simular respostas de uma API RESTful.
+- **Tailwind CSS:** Framework CSS utilitário para estilização rápida e eficiente.
+- **@headlessui/react:** Conjunto de componentes React acessíveis e sem estilos próprios.
+- **@heroicons/react:** Conjunto de ícones React customizáveis e acessíveis.
 
-The response should be `{"success": true, "version": "1.0"}`
-
-**IMPORTANT:** If you need to change default backend port, make sure to revert them back to 3001 before submitting the solution as otherwise the grading system might not detect the backend server and you will lose points.
-
-## Running Frontend Application
-
-The following command will run the SPA in local dev server:
-
-> **npm** start
-
-The application will be available at http://localhost:3000 and by default you should see a welcome message there.
-
-## Production Build
-
-In order to prepare production build you need to run:
-
-> **npm** run build
-
-It is important to make sure that code can be built for production succesfully before submitting the solution.
-
-## Run tests
-
-The test file to verify src/services/LeagueService.js is located at tests/leaderboard.test.js. Feel free to modify the code there in order to test your work.
-It is important to implement all methods on src/services/LeagueService.js and TO NOT CHANGE the interface of them.
-
-To run the tests just run this command. 
-
-```shell
-npm test
-```
-
-
-
-# sport-league-web-ui
+Sinta-se à vontade para entrar em contato se precisar de ajuda ou tiver alguma dúvida durante o processo de configuração e execução do projeto.
